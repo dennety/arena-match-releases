@@ -2,8 +2,8 @@
   "latestVersion": "1.2.0",
   "latestBuildNumber": 3,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 56.3,
-  "releaseNotes": "• Gerador Local de Cards Sociais 9:16 (Stories/WhatsApp) com fotos reais, overlays dinâmicos e humor de quadra 📸🔥\n• Central de Configurações e Governança com atalhos de backup JSON e OTA ⚙️\n• Factory Reset Seguro com barreira mandatória de confirmação textual 'ZERAR' ⚠️\n• Motor de Ligas Privadas e Grupos Fechados (Guild-Based Engine) 🛡️\n• Súmula de Partida Ultra-Rápida em < 5 segundos (< 3 toques) ⚡\n• Eleição algorítmica de MVP da Noite, Artilheiro e Curinga de Ouro 👑\n• Bônus especial para jogadores substitutos/reforço (Curingas) 🃏\n• Sistema de Auto-Atualização direta dentro do APK (OTA) 📲",
+  "fileSizeMb": 56,4,
+  "releaseNotes": "• Atualização oficial do ArenaMatch\n• Melhorias de desempenho e correções",
   "forceUpdate": false,
-  "publishedAt": "2026-10-03T21:20:00Z"
+  "publishedAt": "2026-10-04T14:49:38Z"
 }
