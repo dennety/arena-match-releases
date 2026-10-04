@@ -1,9 +1,12 @@
 {
-  "latestVersion": "1.2.1",
-  "latestBuildNumber": 4,
+  "latestVersion": "1.2.2",
+  "latestBuildNumber": 5,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 56.4,
-  "releaseNotes": "• 🚀 Atualização OTA v1.2.1 liberada!\n• Novo motor de atualização automática em segundo plano\n• Sincronização em tempo real e melhorias no placar",
+  "fileSizeMb": 56.5,
+  "releaseNotes": "• Novo Card Social estilo Transmissão de TV (Matchday Broadcast)
+• Seletor dinâmico de formato (Stories 9:16 e Transmissão TV)
+• Efeitos visuais de holofotes de arena noturna e layout esportivo para resultados
+• Otimizações de renderização e correções gerais",
   "forceUpdate": false,
-  "publishedAt": "2026-10-04T15:00:00Z"
+  "publishedAt": "2026-10-04T20:32:54Z"
 }
