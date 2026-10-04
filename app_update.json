@@ -1,9 +1,9 @@
 {
-  "latestVersion": "1.2.0",
-  "latestBuildNumber": 3,
+  "latestVersion": "1.2.1",
+  "latestBuildNumber": 4,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 56,4,
-  "releaseNotes": "• Atualização oficial do ArenaMatch\n• Melhorias de desempenho e correções",
+  "fileSizeMb": 56.4,
+  "releaseNotes": "• 🚀 Atualização OTA v1.2.1 liberada!\n• Novo motor de atualização automática em segundo plano\n• Sincronização em tempo real e melhorias no placar",
   "forceUpdate": false,
-  "publishedAt": "2026-10-04T14:49:38Z"
+  "publishedAt": "2026-10-04T15:00:00Z"
 }
