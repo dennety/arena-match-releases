@@ -3,10 +3,7 @@
   "latestBuildNumber": 5,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
   "fileSizeMb": 56.5,
-  "releaseNotes": "• Novo Card Social estilo Transmissão de TV (Matchday Broadcast)
-• Seletor dinâmico de formato (Stories 9:16 e Transmissão TV)
-• Efeitos visuais de holofotes de arena noturna e layout esportivo para resultados
-• Otimizações de renderização e correções gerais",
+  "releaseNotes": "• Novo Card Social estilo Transmissão de TV (Matchday Broadcast)\n• Seletor dinâmico de formato (Stories 9:16 e Transmissão TV)\n• Efeitos visuais de holofotes de arena noturna e layout esportivo para resultados\n• Otimizações de renderização e correções gerais",
   "forceUpdate": false,
   "publishedAt": "2026-10-04T20:32:54Z"
 }
