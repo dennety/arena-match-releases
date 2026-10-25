@@ -1,13 +1,9 @@
 {
-  "latestVersion": "1.2.2",
-  "latestBuildNumber": 5,
-  "minimumVersion": "1.0.0",
+  "latestVersion": "1.3.0",
+  "latestBuildNumber": 6,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "downloadHash": "a89800df0df705f73070a84012908f42b43784ff9c0f047563b92e3cfb3c54ea",
-  "downloadSizeBytes": 59087668,
-  "fileSizeMb": 56.35,
-  "releaseNotes": "• Novo Card Social estilo Transmissão de TV (Matchday Broadcast)\n• Seletor dinâmico de formato (Stories 9:16 e Transmissão TV)\n• Efeitos visuais de holofotes de arena noturna e layout esportivo para resultados\n• Otimizações de renderização e correções gerais",
+  "fileSizeMb": 55.3,
+  "releaseNotes": "• Novo Design System \"E-sports\" com superfícies de alto contraste e layout profissional\n• Conformidade WCAG 2.2 AA/AAA: alvos de toque >= 48dp e pisos de tipografia legíveis\n• Placar ao vivo modernizado com divisória sólida de 2px e números tabulares\n• Novo Share Card dinâmico para redes sociais com renderização em alta resolução\n• Sistema de notificações ScoreToast (4s/6s/10s com desfazer) e modais ScoreModal\n• Otimizações de renderização, zero overflows em telas pequenas e correções gerais",
   "forceUpdate": false,
-  "updateType": "feature",
-  "publishedAt": "2026-10-04T20:32:54Z"
+  "publishedAt": "2026-10-25T12:18:48Z"
 }
