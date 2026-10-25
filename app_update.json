@@ -1,9 +1,9 @@
 {
-  "latestVersion": "1.3.1",
-  "latestBuildNumber": 7,
+  "latestVersion": "1.3.2",
+  "latestBuildNumber": 8,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
   "fileSizeMb": 55.3,
-  "releaseNotes": "• Correção no encerramento de partidas: ao atingir a pontuação alvo (ex: 18 pts), o placar encerra imediatamente com resultado final\n• Novo seletor de critério de vitória nas regras: Direto (Sem Vantagem) ou Diferença de 2 Pontos\n• Banner de Resultado Final persistente no placar com opções de salvar resumo ou reiniciar novo jogo\n• Travamento de pontuação após o término do jogo para evitar contagem infinita\n• Resumo da partida modernizado no Design System E-sports com suporte a telas menores e botão de fechar\n• Eliminação de overflows em telas pequenas tanto em modo retrato quanto paisagem",
+  "releaseNotes": "• Correções visuais e de layout: eliminada faixa verde sobre o menu inferior na tela de sorteio com margem de segurança de 110dp\n• Placar em Paisagem sem obstrução: removido painel invasivo central de 96px, liberando 100% da visualização da quadra e dos nomes dos atletas\n• Placar de sets reposicionado na barra superior ao lado do cronômetro\n• Truncamento inteligente de atletas no placar: 'P1 & P2' para duplas e 'P1, P2 +N' para times maiores (ex: Malu, Tayna +2)\n• Contraste aprimorado em chips de formato (1x1 a 6x6), switches inativos e número da pontuação roxa\n• 'Toque para +1' com adaptação dinâmica de tamanho evitando cortes de texto\n• Barra de navegação inferior sólida (opaca) e com ícones de traço uniforme\n• Ocultação automática da navegação inferior no placar em modo horizontal",
   "forceUpdate": false,
-  "publishedAt": "2026-10-25T14:09:38Z"
+  "publishedAt": "2026-10-25T22:42:20Z"
 }
