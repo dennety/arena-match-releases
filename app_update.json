@@ -1,9 +1,9 @@
 {
-  "latestVersion": "1.3.0",
-  "latestBuildNumber": 6,
+  "latestVersion": "1.3.1",
+  "latestBuildNumber": 7,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
   "fileSizeMb": 55.3,
-  "releaseNotes": "• Novo Design System \"E-sports\" com superfícies de alto contraste e layout profissional\n• Conformidade WCAG 2.2 AA/AAA: alvos de toque >= 48dp e pisos de tipografia legíveis\n• Placar ao vivo modernizado com divisória sólida de 2px e números tabulares\n• Novo Share Card dinâmico para redes sociais com renderização em alta resolução\n• Sistema de notificações ScoreToast (4s/6s/10s com desfazer) e modais ScoreModal\n• Otimizações de renderização, zero overflows em telas pequenas e correções gerais",
+  "releaseNotes": "• Correção no encerramento de partidas: ao atingir a pontuação alvo (ex: 18 pts), o placar encerra imediatamente com resultado final\n• Novo seletor de critério de vitória nas regras: Direto (Sem Vantagem) ou Diferença de 2 Pontos\n• Banner de Resultado Final persistente no placar com opções de salvar resumo ou reiniciar novo jogo\n• Travamento de pontuação após o término do jogo para evitar contagem infinita\n• Resumo da partida modernizado no Design System E-sports com suporte a telas menores e botão de fechar\n• Eliminação de overflows em telas pequenas tanto em modo retrato quanto paisagem",
   "forceUpdate": false,
-  "publishedAt": "2026-10-25T12:18:48Z"
+  "publishedAt": "2026-10-25T14:09:38Z"
 }
