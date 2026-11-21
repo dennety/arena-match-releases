@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.4.0",
-  "latestBuildNumber": 10,
+  "latestVersion": "1.4.1",
+  "latestBuildNumber": 11,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
   "fileSizeMb": 52.1,
-  "downloadHash": "fb0e4360e0c873fd062c1304721d9b62bd3580fa4f55f6e010eab3df1f59fa7c",
-  "sha256": "fb0e4360e0c873fd062c1304721d9b62bd3580fa4f55f6e010eab3df1f59fa7c",
-  "releaseNotes": "• Ficha de Atleta Inteligente especializada em Voleibol (Quadra e Areia)\n• Matchmaking balanceado com a Regra do Levantador e paridade posicional\n• Grupos Privados com Curadoria de membros pendentes e aprovação instantânea\n• Link Web Externo de cadastro rápido (join.html) com teaser da Ficha 3D\n• Validação criptográfica de integridade SHA-256 no fluxo OTA\n• 100% de conformidade com acessibilidade e piso tipográfico (>= 12.5px)",
+  "downloadHash": "b5423b4f57cdfeea75aca954c18a7bf223196d80fbaf64e4f19d3a67ad6c9690",
+  "sha256": "b5423b4f57cdfeea75aca954c18a7bf223196d80fbaf64e4f19d3a67ad6c9690",
+  "releaseNotes": "• Correção dos links de convite e cadastro web para o ambiente live no GitHub Pages\n• Formulário de cadastro web agora funcional globalmente sem necessidade de domínio customizado\n• Suporte completo à ficha tática de vôlei e aprovação por curadoria",
   "forceUpdate": false,
-  "publishedAt": "2026-11-21T12:20:29Z"
+  "publishedAt": "2026-11-21T13:37:04Z"
 }
