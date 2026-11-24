@@ -404,6 +404,28 @@
       justify-content: center;
       gap: 8px;
     }
+
+    .btn-copy-code {
+      background: var(--surface-elevated);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy-code:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(0, 240, 255, 0.08);
+    }
   </style>
 </head>
 <body>
@@ -621,7 +643,7 @@
         <span class="lock-icon">🔒</span>
         <h4>Desbloqueie sua Ficha 3D no App</h4>
         <p>Acesse seu histórico de vitórias, fila ao vivo do Rei da Quadra e vote no MVP da noite exclusivamente pelo aplicativo Arena Match!</p>
-        <a href="https://github.com/dennety/arena_match/releases" class="btn-cta-apk" id="apk-download-btn">
+        <a href="https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk" class="btn-cta-apk" id="apk-download-btn">
           <span>📲 Baixar o App Arena Match</span>
         </a>
       </div>
@@ -629,8 +651,13 @@
 
     <!-- WhatsApp Notify CTA -->
     <a href="#" class="btn-whatsapp-notify" id="whatsapp-notify-btn" target="_blank">
-      <span>💬 Avisar o Organizador no WhatsApp</span>
+      <span>💬 Enviar Cadastro ao Organizador no WhatsApp</span>
     </a>
+
+    <!-- Botão de Copiar Código da Ficha -->
+    <button type="button" class="btn-copy-code" id="btn-copy-code" onclick="copyLeadMessage()">
+      <span>📋 Copiar Ficha de Inscrição Completa</span>
+    </button>
   </div>
 
   <script>
@@ -712,36 +739,80 @@
       document.getElementById('result-position').textContent = `${positionTitles[selectedPosition]} • ${superpower}`;
       document.getElementById('result-elo').textContent = elo;
 
-      // Configura WhatsApp Notify
-      const waMsg = encodeURIComponent(
-        `Olá! Acabei de preencher minha Ficha de Atleta de Vôlei no Arena Match para o grupo *${groupName}*!\n\n` +
+      // Mapeamento de posições para VolleyballPosition enum
+      const posMap = {
+        setter: 'setter',
+        outsideHitter: 'outside',
+        middleBlocker: 'middle',
+        opposite: 'opposite',
+        libero: 'libero',
+        universal: 'allRound'
+      };
+
+      const exp = document.getElementById('expLevel').value;
+      const style = document.getElementById('playStyle').value;
+      const serve = parseFloat(document.getElementById('skill-serve').value);
+      const reception = parseFloat(document.getElementById('skill-reception').value);
+      const setting = parseFloat(document.getElementById('skill-setting').value);
+      const attack = parseFloat(document.getElementById('skill-attack').value);
+      const block = parseFloat(document.getElementById('skill-block').value);
+      const defense = parseFloat(document.getElementById('skill-defense').value);
+
+      const leadPayload = {
+        v: 1,
+        groupCode: groupCode,
+        name: fullName,
+        nickname: nickname,
+        phone: phone,
+        pos: posMap[selectedPosition] || 'allRound',
+        exp: exp,
+        style: style,
+        serve: serve,
+        rec: reception,
+        set: setting,
+        atk: attack,
+        blk: block,
+        def: defense,
+        elo: parseInt(elo, 10),
+        superpower: superpower
+      };
+
+      const jsonStr = JSON.stringify(leadPayload);
+      const leadToken = btoa(unescape(encodeURIComponent(jsonStr)));
+
+      window._currentLeadMessage =
+        `🏐 *NOVO ATLETA CADASTRADO NO ARENA MATCH* 🏐\n\n` +
+        `Olá! Preenchi minha ficha de atleta para o grupo *${groupName}*!\n\n` +
         `👤 *Atleta:* ${fullName} (${nickname})\n` +
         `🎯 *Posição:* ${positionTitles[selectedPosition]}\n` +
         `⭐ *Superpoder:* ${superpower}\n` +
-        `📊 *ELO Inicial Estimado:* ${elo}\n\n` +
-        `Pode aprovar minha entrada na lista da próxima pelada? 🚀`
-      );
-      document.getElementById('whatsapp-notify-btn').href = `https://wa.me/?text=${waMsg}`;
+        `📊 *ELO Estimado:* ${elo}\n` +
+        `📱 *WhatsApp:* ${phone}\n\n` +
+        `📋 *CÓDIGO DE IMPORTAÇÃO (ARENA_LEAD):*\n` +
+        `ARENA_LEAD:${leadToken}\n\n` +
+        `👉 *Organizador:* Copie esta mensagem e toque em 'Colar' na aba Ligas do Arena Match para aprovar minha entrada! 🚀`;
+
+      document.getElementById('whatsapp-notify-btn').href = `https://wa.me/?text=${encodeURIComponent(window._currentLeadMessage)}`;
 
       // Salva localmente em localStorage
       try {
-        const leadData = {
-          groupCode,
-          fullName,
-          nickname,
-          phone,
-          position: selectedPosition,
-          elo,
-          superpower,
-          createdAt: new Date().toISOString()
-        };
-        localStorage.setItem(`lead_${groupCode}_${Date.now()}`, JSON.stringify(leadData));
+        localStorage.setItem(`lead_${groupCode}_${Date.now()}`, JSON.stringify(leadPayload));
       } catch (err) {}
 
       // Alterna exibição
       document.getElementById('form-container').style.display = 'none';
       document.getElementById('result-container').style.display = 'flex';
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function copyLeadMessage() {
+      if (!window._currentLeadMessage) return;
+      navigator.clipboard.writeText(window._currentLeadMessage).then(() => {
+        const btn = document.getElementById('btn-copy-code');
+        const origText = btn.innerHTML;
+        btn.innerHTML = '<span>✅ Ficha Copiada! Cole no WhatsApp</span>';
+        setTimeout(() => { btn.innerHTML = origText; }, 3000);
+      });
     }
 
     // Inicialização
