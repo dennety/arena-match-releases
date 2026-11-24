@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.4.1",
-  "latestBuildNumber": 11,
+  "latestVersion": "1.4.2",
+  "latestBuildNumber": 12,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 52.1,
-  "downloadHash": "b5423b4f57cdfeea75aca954c18a7bf223196d80fbaf64e4f19d3a67ad6c9690",
-  "sha256": "b5423b4f57cdfeea75aca954c18a7bf223196d80fbaf64e4f19d3a67ad6c9690",
-  "releaseNotes": "• Correção dos links de convite e cadastro web para o ambiente live no GitHub Pages\n• Formulário de cadastro web agora funcional globalmente sem necessidade de domínio customizado\n• Suporte completo à ficha tática de vôlei e aprovação por curadoria",
+  "fileSizeMb": 52.2,
+  "downloadHash": "13bef0b998271486be302988744b21ed68981d881f0ff51c4bf6486434928e9b",
+  "sha256": "13bef0b998271486be302988744b21ed68981d881f0ff51c4bf6486434928e9b",
+  "releaseNotes": "• Integração direta do formulário web com o app via token WhatsApp e Colar Cadastro\n• Importação instantânea de atletas inscritos para Solicitações Pendentes\n• Ficha completa de vôlei com posições, fundamentos e ELO preservados",
   "forceUpdate": false,
-  "publishedAt": "2026-11-21T13:37:04Z"
+  "publishedAt": "2026-11-24T06:31:29Z"
 }
