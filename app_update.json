@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.4.4",
-  "latestBuildNumber": 14,
+  "latestVersion": "1.5.0",
+  "latestBuildNumber": 15,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 53.6,
-  "downloadHash": "7d9320cc4f56a1d0db9dd1710161e725ff73a00bd9dd62f540ae86113bf90b79",
-  "sha256": "7d9320cc4f56a1d0db9dd1710161e725ff73a00bd9dd62f540ae86113bf90b79",
-  "releaseNotes": "• Correção definitiva de permissões do Cloud Firestore\n• Sincronização automática em tempo real e botão de sincronização manual\n• Inscrições web aparecem imediatamente no APK",
+  "fileSizeMb": 54.2,
+  "downloadHash": "eda5a360de60be0d9c6fc996cb9c1ec9b3c2579fb31126afed02fd69517fd1cf",
+  "sha256": "eda5a360de60be0d9c6fc996cb9c1ec9b3c2579fb31126afed02fd69517fd1cf",
+  "releaseNotes": "• Grid tátil 3D 3x2 no Formato da Partida (corrigido empilhamento vertical)\n• Restauração de Configurações, Factory Reset protegido, Edição e Exclusão de Atletas\n• Botões táteis 3D e novas paletas esportivas (Quadra Olímpica e Sol Forte)\n• Banner 'Voltar ao Placar' ao vivo, piso tipográfico >= 12.5px e layout multi-dispositivo",
   "forceUpdate": false,
-  "publishedAt": "2026-11-25T03:34:25Z"
+  "publishedAt": "2026-11-25T21:23:26Z"
 }
