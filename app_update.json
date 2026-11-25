@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.4.2",
-  "latestBuildNumber": 12,
+  "latestVersion": "1.4.3",
+  "latestBuildNumber": 13,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 52.2,
-  "downloadHash": "13bef0b998271486be302988744b21ed68981d881f0ff51c4bf6486434928e9b",
-  "sha256": "13bef0b998271486be302988744b21ed68981d881f0ff51c4bf6486434928e9b",
-  "releaseNotes": "• Integração direta do formulário web com o app via token WhatsApp e Colar Cadastro\n• Importação instantânea de atletas inscritos para Solicitações Pendentes\n• Ficha completa de vôlei com posições, fundamentos e ELO preservados",
+  "fileSizeMb": 53.6,
+  "downloadHash": "29ecb0f2d80b9f3e272d760ccf2dd9a4281ccb43fd7ea72d26c0aa46cecaab91",
+  "sha256": "29ecb0f2d80b9f3e272d760ccf2dd9a4281ccb43fd7ea72d26c0aa46cecaab91",
+  "releaseNotes": "• Integração oficial com Firebase Cloud Firestore em tempo real\n• Inscrições web aparecem instantaneamente nas Solicitações Pendentes do APK\n• Regras de segurança Cloud Firestore com validação de voleibol",
   "forceUpdate": false,
-  "publishedAt": "2026-11-24T06:31:29Z"
+  "publishedAt": "2026-11-25T03:08:34Z"
 }
