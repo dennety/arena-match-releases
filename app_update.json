@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.4.3",
-  "latestBuildNumber": 13,
+  "latestVersion": "1.4.4",
+  "latestBuildNumber": 14,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
   "fileSizeMb": 53.6,
-  "downloadHash": "29ecb0f2d80b9f3e272d760ccf2dd9a4281ccb43fd7ea72d26c0aa46cecaab91",
-  "sha256": "29ecb0f2d80b9f3e272d760ccf2dd9a4281ccb43fd7ea72d26c0aa46cecaab91",
-  "releaseNotes": "• Integração oficial com Firebase Cloud Firestore em tempo real\n• Inscrições web aparecem instantaneamente nas Solicitações Pendentes do APK\n• Regras de segurança Cloud Firestore com validação de voleibol",
+  "downloadHash": "7d9320cc4f56a1d0db9dd1710161e725ff73a00bd9dd62f540ae86113bf90b79",
+  "sha256": "7d9320cc4f56a1d0db9dd1710161e725ff73a00bd9dd62f540ae86113bf90b79",
+  "releaseNotes": "• Correção definitiva de permissões do Cloud Firestore\n• Sincronização automática em tempo real e botão de sincronização manual\n• Inscrições web aparecem imediatamente no APK",
   "forceUpdate": false,
-  "publishedAt": "2026-11-25T03:08:34Z"
+  "publishedAt": "2026-11-25T03:34:25Z"
 }
