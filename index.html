@@ -696,7 +696,7 @@
 
     // Parse Query Params
     const urlParams = new URLSearchParams(window.location.search);
-    const groupCode = urlParams.get('code') || 'ARENA1';
+    const groupCode = (urlParams.get('code') || 'ARENA1').trim().toUpperCase();
     const groupName = urlParams.get('group') || 'Liga dos Amigos';
     const sportName = urlParams.get('sport') || 'volei';
 
