@@ -660,7 +660,29 @@
     </button>
   </div>
 
+  <!-- Firebase App & Cloud Firestore SDKs (Compat v10) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
   <script>
+    // Configuração oficial do Firebase Cloud Firestore (arena-match-volley)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBEDH5_-YsN3yXGklLgSOlDpXEgNDTOzvQ",
+      authDomain: "arena-match-volley.firebaseapp.com",
+      projectId: "arena-match-volley",
+      storageBucket: "arena-match-volley.firebasestorage.app",
+      messagingSenderId: "991508233342",
+      appId: "1:991508233342:web:f78ed463130ec1a7062c2f"
+    };
+
+    let firestoreDb = null;
+    try {
+      firebase.initializeApp(firebaseConfig);
+      firestoreDb = firebase.firestore();
+    } catch (err) {
+      console.warn('Firebase init warning:', err);
+    }
+
     let selectedPosition = 'setter';
 
     const positionTitles = {
@@ -794,7 +816,38 @@
 
       document.getElementById('whatsapp-notify-btn').href = `https://wa.me/?text=${encodeURIComponent(window._currentLeadMessage)}`;
 
-      // Salva localmente em localStorage
+      // Salva no Cloud Firestore em tempo real
+      if (firestoreDb) {
+        try {
+          firestoreDb.collection('group_leads').add({
+            groupCode: groupCode,
+            name: fullName,
+            nickname: nickname,
+            phone: phone,
+            pos: posMap[selectedPosition] || 'allRound',
+            exp: exp,
+            style: style,
+            serve: serve,
+            rec: reception,
+            set: setting,
+            atk: attack,
+            blk: block,
+            def: defense,
+            elo: parseInt(elo, 10),
+            superpower: superpower,
+            status: 'pending',
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          }).then(function(docRef) {
+            console.log('✅ Lead registrado no Cloud Firestore com ID:', docRef.id);
+          }).catch(function(err) {
+            console.warn('Aviso: Cloud Firestore salvamento pendente de regras:', err);
+          });
+        } catch (err) {
+          console.warn('Erro ao disparar gravação no Firestore:', err);
+        }
+      }
+
+      // Salva localmente em localStorage como fallback
       try {
         localStorage.setItem(`lead_${groupCode}_${Date.now()}`, JSON.stringify(leadPayload));
       } catch (err) {}
