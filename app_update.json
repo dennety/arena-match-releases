@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.7.0",
-  "latestBuildNumber": 17,
+  "latestVersion": "1.8.0",
+  "latestBuildNumber": 18,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 58.8,
-  "downloadHash": "ff8121b06a6bcb2d204fab5cf6473ebc304ca421b795b626132dbbec528883dc",
-  "sha256": "ff8121b06a6bcb2d204fab5cf6473ebc304ca421b795b626132dbbec528883dc",
-  "releaseNotes": "• Placar limpo: removida a mensagem que cobria os botões -1 ao pontuar e ajustado o contraste no tema Sol Forte\n• Fundamentos simplificados com botões táteis de 1 a 5 ★ (fim das barras de arrastar)\n• Avaliação exibida em Estrelas ★ no lugar de ELO no cadastro e formulário web\n• Novo atalho \"Iniciante Zero (Nunca joguei)\" que adapta tudo em 1 toque",
+  "fileSizeMb": 58.9,
+  "downloadHash": "94b90e1b48e47f283269e936668a56c5be61d978fcb29c35ea54f9cbb6767218",
+  "sha256": "94b90e1b48e47f283269e936668a56c5be61d978fcb29c35ea54f9cbb6767218",
+  "releaseNotes": "• Ficha 3D Interativa no App: arraste a carta para inclinar em 3D (acessível em Ligas e Atletas)\n• Sincronização automática: atletas aprovados na aba Ligas agora vão direto para Atletas & Sorteio\n• Novo botão \"Sortear Times com a Liga\" dentro da própria aba Ligas\n• Correção visual no card final do formulário web (cadeado sem invadir o nome)",
   "forceUpdate": false,
-  "publishedAt": "2026-11-26T03:18:39Z"
+  "publishedAt": "2026-11-26T03:52:38Z"
 }

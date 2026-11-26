@@ -483,22 +483,28 @@
       box-shadow: 0 8px 30px rgba(0, 240, 255, 0.2);
     }
 
+    .teaser-locked-area {
+      position: relative;
+      min-height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 12px;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
     .teaser-blur-overlay {
       position: absolute;
-      top: 90px;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      background: rgba(11, 14, 20, 0.7);
+      background: rgba(11, 14, 20, 0.78);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 18px;
       text-align: center;
-      gap: 12px;
+      gap: 10px;
       z-index: 10;
     }
 
@@ -800,30 +806,32 @@
         </div>
       </div>
 
-      <!-- Blurred Stats Area -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; opacity: 0.35;">
-        <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
-          <span style="font-size: 12.5px; color: var(--text-muted);">Saque</span>
-          <div style="font-weight: 700; color: var(--text);" id="teaser-serve">3 ★</div>
+      <!-- Blurred Stats Area + Lock Overlay isolados abaixo do cabeçalho -->
+      <div class="teaser-locked-area">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; opacity: 0.35; padding: 14px;">
+          <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
+            <span style="font-size: 12.5px; color: var(--text-muted);">Saque</span>
+            <div style="font-weight: 700; color: var(--text);" id="teaser-serve">3 ★</div>
+          </div>
+          <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
+            <span style="font-size: 12.5px; color: var(--text-muted);">Passe</span>
+            <div style="font-weight: 700; color: var(--text);" id="teaser-rec">3 ★</div>
+          </div>
+          <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
+            <span style="font-size: 12.5px; color: var(--text-muted);">Ataque</span>
+            <div style="font-weight: 700; color: var(--text);" id="teaser-atk">3 ★</div>
+          </div>
         </div>
-        <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
-          <span style="font-size: 12.5px; color: var(--text-muted);">Passe</span>
-          <div style="font-weight: 700; color: var(--text);" id="teaser-rec">3 ★</div>
-        </div>
-        <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
-          <span style="font-size: 12.5px; color: var(--text-muted);">Ataque</span>
-          <div style="font-weight: 700; color: var(--text);" id="teaser-atk">3 ★</div>
-        </div>
-      </div>
 
-      <!-- Lock Overlay (Feature Gating) -->
-      <div class="teaser-blur-overlay">
-        <span class="lock-icon">🔒</span>
-        <h4>Desbloqueie sua Ficha 3D no App</h4>
-        <p>Acesse seu histórico de vitórias, fila ao vivo do Rei da Quadra e vote no MVP da noite exclusivamente pelo aplicativo Arena Match!</p>
-        <a href="https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk" class="btn-cta-apk" id="apk-download-btn">
-          <span>📲 Baixar o App Arena Match</span>
-        </a>
+        <!-- Lock Overlay (Feature Gating) -->
+        <div class="teaser-blur-overlay">
+          <span class="lock-icon">🔒</span>
+          <h4>Desbloqueie sua Ficha 3D no App</h4>
+          <p>Acesse seu histórico de vitórias, fila ao vivo do Rei da Quadra e vote no MVP da noite exclusivamente pelo aplicativo Arena Match!</p>
+          <a href="https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk" class="btn-cta-apk" id="apk-download-btn">
+            <span>📲 Baixar o App Arena Match</span>
+          </a>
+        </div>
       </div>
     </div>
 
