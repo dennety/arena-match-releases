@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.6.0",
-  "latestBuildNumber": 16,
+  "latestVersion": "1.7.0",
+  "latestBuildNumber": 17,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 55.2,
-  "downloadHash": "acf0d003c75b864b679057f0370852e76326874e6be235206ede985b27e98331",
-  "sha256": "acf0d003c75b864b679057f0370852e76326874e6be235206ede985b27e98331",
-  "releaseNotes": "• Login Progressivo com Conta Google (Firebase Auth + Google Sign-In)\n• Backup e Restauração Automática na Nuvem vinculados à conta Google\n• Proteção de dados isolada por usuário no Cloud Firestore",
+  "fileSizeMb": 58.8,
+  "downloadHash": "ff8121b06a6bcb2d204fab5cf6473ebc304ca421b795b626132dbbec528883dc",
+  "sha256": "ff8121b06a6bcb2d204fab5cf6473ebc304ca421b795b626132dbbec528883dc",
+  "releaseNotes": "• Placar limpo: removida a mensagem que cobria os botões -1 ao pontuar e ajustado o contraste no tema Sol Forte\n• Fundamentos simplificados com botões táteis de 1 a 5 ★ (fim das barras de arrastar)\n• Avaliação exibida em Estrelas ★ no lugar de ELO no cadastro e formulário web\n• Novo atalho \"Iniciante Zero (Nunca joguei)\" que adapta tudo em 1 toque",
   "forceUpdate": false,
-  "publishedAt": "2026-11-26T01:25:43Z"
+  "publishedAt": "2026-11-26T03:18:39Z"
 }

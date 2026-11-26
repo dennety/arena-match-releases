@@ -185,44 +185,173 @@
       line-height: 1.3;
     }
 
-    /* Fundamentals Slider */
-    .skill-slider-row {
+    /* Form Container Layout */
+    #athlete-form {
       display: flex;
       flex-direction: column;
-      gap: 4px;
-      margin-bottom: 8px;
+      gap: 16px;
+      width: 100%;
+    }
+
+    /* Rookie Zero Preset Banner */
+    .rookie-banner {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(0, 240, 255, 0.06));
+      border: 1.5px solid rgba(16, 185, 129, 0.45);
+      border-radius: 16px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rookie-banner.active {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: var(--accent-green);
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.25);
+    }
+
+    .rookie-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .rookie-emoji {
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .rookie-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .rookie-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    .rookie-toggle-pill {
+      flex-shrink: 0;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 800;
+      background: var(--surface-elevated);
+      color: var(--accent-green);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+    }
+
+    .rookie-banner.active .rookie-toggle-pill {
+      background: var(--accent-green);
+      color: #042F2E;
+      border-color: var(--accent-green);
+    }
+
+    .rookie-summary-card {
+      display: none;
+      background: var(--surface);
+      border: 1px dashed var(--accent-green);
+      border-radius: 16px;
+      padding: 16px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rookie-summary-card.visible {
+      display: flex;
+    }
+
+    .btn-ghost-sm {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--accent-cyan);
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Discrete 1-to-5 Tactile Skill Pills */
+    .skill-header-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .skill-group-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 12px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
     }
 
     .skill-label-row {
       display: flex;
       justify-content: space-between;
-      font-size: 13px;
-      font-weight: 600;
+      align-items: center;
+      font-size: 13.5px;
+      font-weight: 700;
     }
 
     .skill-val {
       color: var(--accent-cyan);
-      font-weight: 700;
+      font-size: 12.5px;
+      font-weight: 800;
     }
 
-    input[type=range] {
-      -webkit-appearance: none;
-      width: 100%;
-      height: 6px;
-      background: var(--surface-elevated);
-      border-radius: 4px;
-      border: none;
-      padding: 0;
+    .skill-pills {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
     }
 
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 18px;
-      width: 18px;
-      border-radius: 50%;
-      background: var(--accent-cyan);
+    .skill-pill {
+      min-height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      border-bottom: 3px solid #0B0E14;
+      background: var(--surface);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      transition: all 0.14s ease;
+    }
+
+    .skill-pill:active {
+      transform: translateY(2px);
+      border-bottom-width: 1px;
+    }
+
+    .skill-pill.active {
+      background: var(--accent-cyan);
+      color: #031525;
+      border-color: var(--accent-cyan);
+      border-bottom-color: #0891B2;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.35);
     }
 
     /* Live Preview Banner */
@@ -234,11 +363,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .preview-elo-col {
       display: flex;
       flex-direction: column;
+      gap: 2px;
     }
 
     .preview-elo-title {
@@ -250,11 +382,17 @@
     }
 
     .preview-elo-val {
-      font-family: var(--font-display);
-      font-size: 38px;
-      line-height: 1;
-      color: var(--accent-cyan);
+      font-family: var(--font-family);
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--accent-amber);
+      font-weight: 800;
+    }
+
+    .preview-tier-sub {
+      font-size: 12.5px;
       font-weight: 700;
+      color: var(--accent-cyan);
     }
 
     .preview-badge {
@@ -272,9 +410,11 @@
 
     /* Submit Button */
     .btn-submit {
+      width: 100%;
       background: var(--accent-green);
       color: #042F2E;
       border: none;
+      border-bottom: 3px solid #059669;
       border-radius: 12px;
       padding: 16px;
       font-size: 15px;
@@ -282,7 +422,7 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -290,9 +430,13 @@
       box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
     }
 
+    .btn-submit:active {
+      transform: translateY(2px);
+      border-bottom-width: 1px;
+    }
+
     .btn-submit:hover {
       background: #34D399;
-      transform: translateY(-1px);
     }
 
     /* Success / Result Screen */
@@ -462,40 +606,65 @@
         </div>
       </section>
 
+      <!-- Atalho Iniciante Zero (1 Toque) -->
+      <div class="rookie-banner" id="rookie-banner" onclick="toggleRookieZero()">
+        <div class="rookie-info">
+          <span class="rookie-emoji">🌱</span>
+          <div>
+            <div class="rookie-title">Nunca joguei / Sou Iniciante Zero</div>
+            <div class="rookie-desc">Não sabe posição ou fundamentos? Ative para adaptarmos sua ficha automaticamente em 1 ★.</div>
+          </div>
+        </div>
+        <span class="rookie-toggle-pill" id="rookie-pill">Ativar</span>
+      </div>
+
+      <div class="rookie-summary-card" id="rookie-summary">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+          <div>
+            <div style="font-size: 14px; font-weight: 800; color: var(--accent-green);">🌱 Modo Iniciante Zero Ativado</div>
+            <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 2px;">Posição: Geral / Racha • Notas 1 ★ em todos os fundamentos para times equilibrados.</div>
+          </div>
+          <div style="font-size: 15px; font-weight: 800; color: var(--accent-amber); white-space: nowrap;">★☆☆☆☆ 1.0</div>
+        </div>
+        <button type="button" class="btn-ghost-sm" onclick="toggleRookieZero()">
+          <span>✏️ Quero preencher minha posição e notas manualmente</span>
+        </button>
+      </div>
+
       <!-- Posição de Vôlei -->
-      <section class="card">
+      <section class="card" id="card-position">
         <div class="card-title">
           <span class="icon">🎯</span>
           <span>Posição Preferida no Vôlei</span>
         </div>
 
         <div class="position-grid" id="position-grid">
-          <div class="position-option active" onclick="selectPosition('setter')">
+          <div class="position-option active" data-pos="setter" onclick="selectPosition('setter', this)">
             <div class="position-header">🎯 Levantador</div>
             <div class="position-desc">Armador tático, visão periférica e precisão de toque.</div>
           </div>
 
-          <div class="position-option" onclick="selectPosition('outsideHitter')">
+          <div class="position-option" data-pos="outsideHitter" onclick="selectPosition('outsideHitter', this)">
             <div class="position-header">⚡ Ponteiro</div>
             <div class="position-desc">Passe de recepção e ataque veloz na entrada de rede.</div>
           </div>
 
-          <div class="position-option" onclick="selectPosition('middleBlocker')">
+          <div class="position-option" data-pos="middleBlocker" onclick="selectPosition('middleBlocker', this)">
             <div class="position-header">🧱 Central</div>
             <div class="position-desc">Paredão no bloqueio e ataque relâmpago de bola rápida.</div>
           </div>
 
-          <div class="position-option" onclick="selectPosition('opposite')">
+          <div class="position-option" data-pos="opposite" onclick="selectPosition('opposite', this)">
             <div class="position-header">💥 Oposto</div>
             <div class="position-desc">Maior pontuador e força de ataque na saída de rede.</div>
           </div>
 
-          <div class="position-option" onclick="selectPosition('libero')">
+          <div class="position-option" data-pos="libero" onclick="selectPosition('libero', this)">
             <div class="position-header">🛡️ Líbero</div>
             <div class="position-desc">Especialista puro em recepção, manchete e defesa.</div>
           </div>
 
-          <div class="position-option" onclick="selectPosition('universal')">
+          <div class="position-option" data-pos="universal" onclick="selectPosition('universal', this)">
             <div class="position-header">🏐 Geral / Curinga</div>
             <div class="position-desc">Joga em qualquer função com versatilidade.</div>
           </div>
@@ -503,7 +672,7 @@
       </section>
 
       <!-- Experiência e Estilo -->
-      <section class="card">
+      <section class="card" id="card-exp">
         <div class="card-title">
           <span class="icon">⚡</span>
           <span>Experiência & Estilo</span>
@@ -511,7 +680,8 @@
 
         <div class="form-group">
           <label for="expLevel">Nível de Experiência</label>
-          <select id="expLevel" onchange="updateEloPreview()">
+          <select id="expLevel" onchange="onExperienceChanged()">
+            <option value="rookieZero">Iniciante Zero (Nunca joguei / Primeira vez)</option>
             <option value="beginner">Iniciante (Pratica há menos de 1 ano)</option>
             <option value="intermediate" selected>Intermediário (Joga regularmente há 1 a 3 anos)</option>
             <option value="advanced">Avançado (Joga há mais de 3 anos / Torneios amadores)</option>
@@ -521,77 +691,84 @@
 
         <div class="form-group">
           <label for="playStyle">Estilo Predominante</label>
-          <select id="playStyle" onchange="updateEloPreview()">
-            <option value="strategic" selected>Estratégico (Joga tático, larga onde não tem ninguém)</option>
-            <option value="aggressive">Agressivo (Força pura no saque e cortadas)</option>
-            <option value="defensive">Defensivo (Garante o passe e salva bolas difíceis)</option>
-            <option value="balanced">Equilibrado (Regular em todos os fundamentos)</option>
+          <select id="playStyle" onchange="updateRatingPreview()">
+            <option value="tacticalBrain" selected>Frio & Calculista (Joga tático, larga onde não tem ninguém)</option>
+            <option value="aggressiveSpiker">Pancada & Vibração (Força pura no saque e cortadas)</option>
+            <option value="divingDefender">Peixinho & Raça (Garante o passe e salva bolas difíceis)</option>
+            <option value="silkySetter">Mão de Seda (Distribuição precisa nos levantamentos)</option>
+            <option value="casualVibe">Resenha & Equilibrado (Regular e foco na diversão)</option>
           </select>
         </div>
       </section>
 
-      <!-- Fundamentos Técnicos (Sliders) -->
-      <section class="card">
-        <div class="card-title">
-          <span class="icon">📊</span>
-          <span>Fundamentos Técnicos (1 a 5)</span>
-        </div>
-
-        <div class="skill-slider-row">
-          <div class="skill-label-row">
-            <span>Saque</span>
-            <span class="skill-val" id="val-serve">3.5</span>
+      <!-- Fundamentos Técnicos (Botões 1 a 5) -->
+      <section class="card" id="card-skills">
+        <div class="skill-header-actions">
+          <div class="card-title">
+            <span class="icon">⭐</span>
+            <span>Fundamentos (1 a 5 ★)</span>
           </div>
-          <input type="range" id="skill-serve" min="1" max="5" step="0.5" value="3.5" oninput="updateSkill('serve')">
+          <button type="button" class="btn-ghost-sm" onclick="applyRecommendedFundamentals(true)">
+            <span>✨ Auto pela posição</span>
+          </button>
         </div>
 
-        <div class="skill-slider-row">
+        <div class="skill-group-row" data-skill="serve">
           <div class="skill-label-row">
-            <span>Recepção / Passe</span>
-            <span class="skill-val" id="val-reception">3.5</span>
+            <span>1. Saque</span>
+            <span class="skill-val" id="val-serve">3 ★ · Regular</span>
           </div>
-          <input type="range" id="skill-reception" min="1" max="5" step="0.5" value="3.5" oninput="updateSkill('reception')">
+          <div class="skill-pills" id="pills-serve"></div>
         </div>
 
-        <div class="skill-slider-row">
+        <div class="skill-group-row" data-skill="reception">
           <div class="skill-label-row">
-            <span>Levantamento</span>
-            <span class="skill-val" id="val-setting">4.0</span>
+            <span>2. Recepção / Passe</span>
+            <span class="skill-val" id="val-reception">3 ★ · Regular</span>
           </div>
-          <input type="range" id="skill-setting" min="1" max="5" step="0.5" value="4.0" oninput="updateSkill('setting')">
+          <div class="skill-pills" id="pills-reception"></div>
         </div>
 
-        <div class="skill-slider-row">
+        <div class="skill-group-row" data-skill="setting">
           <div class="skill-label-row">
-            <span>Ataque / Cortada</span>
-            <span class="skill-val" id="val-attack">3.0</span>
+            <span>3. Levantamento</span>
+            <span class="skill-val" id="val-setting">4 ★ · Forte</span>
           </div>
-          <input type="range" id="skill-attack" min="1" max="5" step="0.5" value="3.0" oninput="updateSkill('attack')">
+          <div class="skill-pills" id="pills-setting"></div>
         </div>
 
-        <div class="skill-slider-row">
+        <div class="skill-group-row" data-skill="attack">
           <div class="skill-label-row">
-            <span>Bloqueio</span>
-            <span class="skill-val" id="val-block">3.0</span>
+            <span>4. Ataque / Cortada</span>
+            <span class="skill-val" id="val-attack">3 ★ · Regular</span>
           </div>
-          <input type="range" id="skill-block" min="1" max="5" step="0.5" value="3.0" oninput="updateSkill('block')">
+          <div class="skill-pills" id="pills-attack"></div>
         </div>
 
-        <div class="skill-slider-row">
+        <div class="skill-group-row" data-skill="block">
           <div class="skill-label-row">
-            <span>Defesa de Fundo</span>
-            <span class="skill-val" id="val-defense">3.5</span>
+            <span>5. Bloqueio</span>
+            <span class="skill-val" id="val-block">3 ★ · Regular</span>
           </div>
-          <input type="range" id="skill-defense" min="1" max="5" step="0.5" value="3.5" oninput="updateSkill('defense')">
+          <div class="skill-pills" id="pills-block"></div>
         </div>
 
-        <!-- Live ELO Preview -->
+        <div class="skill-group-row" data-skill="defense">
+          <div class="skill-label-row">
+            <span>6. Defesa de Fundo</span>
+            <span class="skill-val" id="val-defense">3 ★ · Regular</span>
+          </div>
+          <div class="skill-pills" id="pills-defense"></div>
+        </div>
+
+        <!-- Live Star Tier Preview (sem ELO) -->
         <div class="preview-box">
           <div class="preview-elo-col">
-            <span class="preview-elo-title">ELO Inicial Estimado</span>
-            <span class="preview-elo-val" id="live-elo">1240</span>
+            <span class="preview-elo-title">Sua Avaliação em Estrelas</span>
+            <span class="preview-elo-val" id="live-stars">★★★☆☆ 3.2 ★</span>
+            <span class="preview-tier-sub" id="live-tier">Nível: Intermediário</span>
           </div>
-          <div class="preview-badge" id="live-superpower">🎯 Visão de Jogo</div>
+          <div class="preview-badge" id="live-superpower">🎯 Maestro do Toque</div>
         </div>
       </section>
 
@@ -605,20 +782,21 @@
   <!-- Tela de Sucesso / Teaser da Ficha -->
   <div class="container result-container" id="result-container">
     <div class="success-alert">
-      <h2>🎉 Solicitação Enviada!</h2>
-      <p id="success-message">Seu perfil foi registrado no grupo. O organizador da liga já pode aprovar sua entrada para os sorteios das partidas!</p>
+      <h2>🎉 Cadastro Enviado ao App!</h2>
+      <p id="success-message">Sua ficha já foi registrada na nuvem do grupo. O organizador já vê seu nome na aba Ligas para aprovar nos sorteios!</p>
     </div>
 
     <!-- Teaser Card -->
     <div class="teaser-card">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px;">
         <div>
           <h3 style="font-size: 18px; color: var(--text); font-weight: 800;" id="result-name">Lucas Ferreira</h3>
           <p style="font-size: 13px; color: var(--accent-cyan);" id="result-position">🎯 Levantador</p>
         </div>
-        <div style="text-align: right;">
-          <span style="font-size: 12.5px; color: var(--text-muted); text-transform: uppercase;">Rating ELO</span>
-          <div style="font-family: var(--font-display); font-size: 32px; color: var(--accent-cyan); line-height: 1;" id="result-elo">1240</div>
+        <div style="text-align: right; flex-shrink: 0;">
+          <span style="font-size: 12.5px; color: var(--text-muted); text-transform: uppercase;">Nível</span>
+          <div style="font-size: 22px; font-weight: 800; color: var(--accent-amber); line-height: 1.1;" id="result-stars">3.2 ★</div>
+          <div style="font-size: 12.5px; font-weight: 700; color: var(--accent-cyan);" id="result-tier">Intermediário</div>
         </div>
       </div>
 
@@ -626,15 +804,15 @@
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; opacity: 0.35;">
         <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
           <span style="font-size: 12.5px; color: var(--text-muted);">Saque</span>
-          <div style="font-weight: 700; color: var(--text);">3.5 / 5</div>
+          <div style="font-weight: 700; color: var(--text);" id="teaser-serve">3 ★</div>
         </div>
         <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
           <span style="font-size: 12.5px; color: var(--text-muted);">Passe</span>
-          <div style="font-weight: 700; color: var(--text);">3.5 / 5</div>
+          <div style="font-weight: 700; color: var(--text);" id="teaser-rec">3 ★</div>
         </div>
         <div style="background: var(--surface-elevated); padding: 8px; border-radius: 8px; text-align: center;">
-          <span style="font-size: 12.5px; color: var(--text-muted);">Levant.</span>
-          <div style="font-weight: 700; color: var(--text);">4.0 / 5</div>
+          <span style="font-size: 12.5px; color: var(--text-muted);">Ataque</span>
+          <div style="font-weight: 700; color: var(--text);" id="teaser-atk">3 ★</div>
         </div>
       </div>
 
@@ -684,6 +862,27 @@
     }
 
     let selectedPosition = 'setter';
+    let isRookieZero = false;
+    let manualSkillsEdited = false;
+    let computedInternalElo = 1200;
+
+    const SKILL_KEYS = ['serve', 'reception', 'setting', 'attack', 'block', 'defense'];
+    const SKILL_TAGS = {
+      1: '1 ★ · Zero / Base',
+      2: '2 ★ · Aprendendo',
+      3: '3 ★ · Regular',
+      4: '4 ★ · Forte',
+      5: '5 ★ · Domina'
+    };
+
+    const skills = {
+      serve: 3,
+      reception: 2,
+      setting: 4,
+      attack: 2,
+      block: 3,
+      defense: 3
+    };
 
     const positionTitles = {
       setter: '🎯 Levantador',
@@ -698,54 +897,200 @@
     const urlParams = new URLSearchParams(window.location.search);
     const groupCode = (urlParams.get('code') || 'ARENA1').trim().toUpperCase();
     const groupName = urlParams.get('group') || 'Liga dos Amigos';
-    const sportName = urlParams.get('sport') || 'volei';
 
     if (groupName) {
       document.getElementById('group-pill').textContent = `🏐 ARENA MATCH • ${groupName.toUpperCase()}`;
     }
 
-    function selectPosition(pos) {
+    function clampSkill(v) {
+      return Math.max(1, Math.min(5, Math.round(v)));
+    }
+
+    function renderAllSkillPills() {
+      SKILL_KEYS.forEach((key) => {
+        const container = document.getElementById(`pills-${key}`);
+        if (!container) return;
+        container.innerHTML = '';
+        for (let val = 1; val <= 5; val++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = `skill-pill${skills[key] === val ? ' active' : ''}`;
+          btn.textContent = `${val} ★`;
+          btn.onclick = () => setSkillValue(key, val);
+          container.appendChild(btn);
+        }
+        const label = document.getElementById(`val-${key}`);
+        if (label) {
+          label.textContent = SKILL_TAGS[skills[key]] || `${skills[key]} ★`;
+        }
+      });
+    }
+
+    function setSkillValue(key, val) {
+      manualSkillsEdited = true;
+      skills[key] = clampSkill(val);
+      renderAllSkillPills();
+      updateRatingPreview();
+    }
+
+    function applyRecommendedFundamentals(force = false) {
+      if (manualSkillsEdited && !force) return;
+      const exp = document.getElementById('expLevel').value;
+      if (exp === 'rookieZero' || isRookieZero) {
+        SKILL_KEYS.forEach((k) => { skills[k] = 1; });
+        renderAllSkillPills();
+        updateRatingPreview();
+        return;
+      }
+
+      const baseMap = {
+        beginner: 2,
+        intermediate: 3,
+        advanced: 4,
+        competitive: 5
+      };
+      const base = baseMap[exp] || 3;
+
+      if (selectedPosition === 'setter') {
+        skills.serve = clampSkill(base);
+        skills.reception = clampSkill(base - 1);
+        skills.setting = clampSkill(base + 1);
+        skills.attack = clampSkill(base - 1);
+        skills.block = clampSkill(base);
+        skills.defense = clampSkill(base);
+      } else if (selectedPosition === 'outsideHitter') {
+        skills.serve = clampSkill(base);
+        skills.reception = clampSkill(base + 1);
+        skills.setting = clampSkill(base - 1);
+        skills.attack = clampSkill(base + 1);
+        skills.block = clampSkill(base);
+        skills.defense = clampSkill(base);
+      } else if (selectedPosition === 'middleBlocker') {
+        skills.serve = clampSkill(base);
+        skills.reception = clampSkill(base - 1);
+        skills.setting = clampSkill(base - 1);
+        skills.attack = clampSkill(base + 1);
+        skills.block = clampSkill(base + 1);
+        skills.defense = clampSkill(base - 1);
+      } else if (selectedPosition === 'opposite') {
+        skills.serve = clampSkill(base + 1);
+        skills.reception = clampSkill(base - 1);
+        skills.setting = clampSkill(base - 1);
+        skills.attack = clampSkill(base + 1);
+        skills.block = clampSkill(base);
+        skills.defense = clampSkill(base);
+      } else if (selectedPosition === 'libero') {
+        skills.serve = clampSkill(base - 1);
+        skills.reception = clampSkill(base + 1);
+        skills.setting = clampSkill(base);
+        skills.attack = 1;
+        skills.block = 1;
+        skills.defense = clampSkill(base + 1);
+      } else {
+        SKILL_KEYS.forEach((k) => { skills[k] = clampSkill(base); });
+      }
+
+      if (force) manualSkillsEdited = false;
+      renderAllSkillPills();
+      updateRatingPreview();
+    }
+
+    function selectPosition(pos, el) {
       selectedPosition = pos;
-      const options = document.querySelectorAll('.position-option');
-      options.forEach(opt => opt.classList.remove('active'));
-      event.currentTarget.classList.add('active');
-      updateEloPreview();
+      document.querySelectorAll('.position-option').forEach((opt) => {
+        opt.classList.toggle('active', opt.dataset.pos === pos || opt === el);
+      });
+      applyRecommendedFundamentals(false);
+      updateRatingPreview();
     }
 
-    function updateSkill(skill) {
-      const val = document.getElementById(`skill-${skill}`).value;
-      document.getElementById(`val-${skill}`).textContent = parseFloat(val).toFixed(1);
-      updateEloPreview();
+    function toggleRookieZero(forceState) {
+      isRookieZero = typeof forceState === 'boolean' ? forceState : !isRookieZero;
+      const banner = document.getElementById('rookie-banner');
+      const pill = document.getElementById('rookie-pill');
+      const summary = document.getElementById('rookie-summary');
+      const cardPos = document.getElementById('card-position');
+      const cardExp = document.getElementById('card-exp');
+      const cardSkills = document.getElementById('card-skills');
+
+      banner.classList.toggle('active', isRookieZero);
+      pill.textContent = isRookieZero ? 'Ativo ✓' : 'Ativar';
+      summary.classList.toggle('visible', isRookieZero);
+
+      const showDetailed = isRookieZero ? 'none' : '';
+      cardPos.style.display = showDetailed;
+      cardExp.style.display = showDetailed;
+      cardSkills.style.display = showDetailed;
+
+      if (isRookieZero) {
+        selectedPosition = 'universal';
+        document.querySelectorAll('.position-option').forEach((opt) => {
+          opt.classList.toggle('active', opt.dataset.pos === 'universal');
+        });
+        document.getElementById('expLevel').value = 'rookieZero';
+        document.getElementById('playStyle').value = 'casualVibe';
+        manualSkillsEdited = false;
+        applyRecommendedFundamentals(true);
+      } else {
+        if (document.getElementById('expLevel').value === 'rookieZero') {
+          document.getElementById('expLevel').value = 'beginner';
+        }
+        applyRecommendedFundamentals(false);
+      }
+      updateRatingPreview();
     }
 
-    function updateEloPreview() {
-      const serve = parseFloat(document.getElementById('skill-serve').value);
-      const reception = parseFloat(document.getElementById('skill-reception').value);
-      const setting = parseFloat(document.getElementById('skill-setting').value);
-      const attack = parseFloat(document.getElementById('skill-attack').value);
-      const block = parseFloat(document.getElementById('skill-block').value);
-      const defense = parseFloat(document.getElementById('skill-defense').value);
+    function onExperienceChanged() {
+      const exp = document.getElementById('expLevel').value;
+      if (exp === 'rookieZero') {
+        toggleRookieZero(true);
+        return;
+      }
+      applyRecommendedFundamentals(false);
+      updateRatingPreview();
+    }
+
+    function computeRatingSnapshot() {
+      const avg = (skills.serve + skills.reception + skills.setting + skills.attack + skills.block + skills.defense) / 6.0;
+      const avgFixed = parseFloat(avg.toFixed(1));
+      const filledStars = clampSkill(avgFixed);
+      const starsGraphic = '★'.repeat(filledStars) + '☆'.repeat(5 - filledStars);
 
       const exp = document.getElementById('expLevel').value;
-      let expBonus = 0;
-      if (exp === 'beginner') expBonus = -80;
-      else if (exp === 'advanced') expBonus = 80;
-      else if (exp === 'competitive') expBonus = 160;
+      const baseEloMap = {
+        rookieZero: 900,
+        beginner: 1000,
+        intermediate: 1200,
+        advanced: 1400,
+        competitive: 1600
+      };
+      const baseElo = baseEloMap[exp] || 1200;
+      const skillDelta = Math.round((avgFixed - 3.0) * 50);
+      computedInternalElo = Math.max(800, Math.min(1800, baseElo + skillDelta));
 
-      const avgFundamentals = (serve + reception + setting + attack + block + defense) / 6.0;
-      const calculatedElo = Math.round(1000 + (avgFundamentals * 60) + expBonus);
+      let tierName = 'Intermediário';
+      if (exp === 'rookieZero' || avgFixed < 1.8) tierName = 'Iniciante Zero';
+      else if (avgFixed < 2.6) tierName = 'Iniciante';
+      else if (avgFixed < 3.6) tierName = 'Intermediário';
+      else if (avgFixed < 4.4) tierName = 'Avançado';
+      else tierName = 'Elite';
 
-      document.getElementById('live-elo').textContent = calculatedElo;
-
-      // Superpower badge
       let badge = '🏐 Versátil';
-      if (setting >= 4.0) badge = '🎯 Maestro do Toque';
-      else if (reception >= 4.0 || defense >= 4.0) badge = '🛡️ Muralha Defensiva';
-      else if (attack >= 4.0) badge = '💥 Martelo da Rede';
-      else if (serve >= 4.0) badge = '🚀 Saque Viagem';
-      else if (block >= 4.0) badge = '🧱 Paredão Intransponível';
+      if (exp === 'rookieZero' || avgFixed <= 1.2) badge = '🌱 Primeiro Saque';
+      else if (skills.setting >= 4) badge = '🎯 Maestro do Toque';
+      else if (skills.reception >= 4 || skills.defense >= 4) badge = '🛡️ Muralha Defensiva';
+      else if (skills.attack >= 4) badge = '💥 Martelo da Rede';
+      else if (skills.serve >= 4) badge = '🚀 Saque Viagem';
+      else if (skills.block >= 4) badge = '🧱 Paredão Intransponível';
 
-      document.getElementById('live-superpower').textContent = badge;
+      return { avgFixed, starsGraphic, tierName, badge, elo: computedInternalElo };
+    }
+
+    function updateRatingPreview() {
+      const snap = computeRatingSnapshot();
+      document.getElementById('live-stars').textContent = `${snap.starsGraphic} ${snap.avgFixed.toFixed(1)} ★`;
+      document.getElementById('live-tier').textContent = `Nível: ${snap.tierName}`;
+      document.getElementById('live-superpower').textContent = snap.badge;
     }
 
     function handleFormSubmit(e) {
@@ -754,12 +1099,15 @@
       const fullName = document.getElementById('fullName').value.trim();
       const nickname = document.getElementById('nickname').value.trim() || fullName.split(' ')[0];
       const phone = document.getElementById('phone').value.trim();
-      const elo = document.getElementById('live-elo').textContent;
-      const superpower = document.getElementById('live-superpower').textContent;
+      const snap = computeRatingSnapshot();
 
       document.getElementById('result-name').textContent = nickname ? `${fullName} (${nickname})` : fullName;
-      document.getElementById('result-position').textContent = `${positionTitles[selectedPosition]} • ${superpower}`;
-      document.getElementById('result-elo').textContent = elo;
+      document.getElementById('result-position').textContent = `${positionTitles[selectedPosition]} • ${snap.badge}`;
+      document.getElementById('result-stars').textContent = `${snap.avgFixed.toFixed(1)} ★`;
+      document.getElementById('result-tier').textContent = snap.tierName;
+      document.getElementById('teaser-serve').textContent = `${skills.serve} ★`;
+      document.getElementById('teaser-rec').textContent = `${skills.reception} ★`;
+      document.getElementById('teaser-atk').textContent = `${skills.attack} ★`;
 
       // Mapeamento de posições para VolleyballPosition enum
       const posMap = {
@@ -773,12 +1121,6 @@
 
       const exp = document.getElementById('expLevel').value;
       const style = document.getElementById('playStyle').value;
-      const serve = parseFloat(document.getElementById('skill-serve').value);
-      const reception = parseFloat(document.getElementById('skill-reception').value);
-      const setting = parseFloat(document.getElementById('skill-setting').value);
-      const attack = parseFloat(document.getElementById('skill-attack').value);
-      const block = parseFloat(document.getElementById('skill-block').value);
-      const defense = parseFloat(document.getElementById('skill-defense').value);
 
       const leadPayload = {
         v: 1,
@@ -789,14 +1131,14 @@
         pos: posMap[selectedPosition] || 'allRound',
         exp: exp,
         style: style,
-        serve: serve,
-        rec: reception,
-        set: setting,
-        atk: attack,
-        blk: block,
-        def: defense,
-        elo: parseInt(elo, 10),
-        superpower: superpower
+        serve: skills.serve,
+        rec: skills.reception,
+        set: skills.setting,
+        atk: skills.attack,
+        blk: skills.block,
+        def: skills.defense,
+        elo: snap.elo,
+        superpower: snap.badge
       };
 
       const jsonStr = JSON.stringify(leadPayload);
@@ -804,15 +1146,14 @@
 
       window._currentLeadMessage =
         `🏐 *NOVO ATLETA CADASTRADO NO ARENA MATCH* 🏐\n\n` +
-        `Olá! Preenchi minha ficha de atleta para o grupo *${groupName}*!\n\n` +
+        `Olá! Preenchi minha ficha para o grupo *${groupName}*!\n\n` +
         `👤 *Atleta:* ${fullName} (${nickname})\n` +
         `🎯 *Posição:* ${positionTitles[selectedPosition]}\n` +
-        `⭐ *Superpoder:* ${superpower}\n` +
-        `📊 *ELO Estimado:* ${elo}\n` +
+        `⭐ *Nível:* ${snap.avgFixed.toFixed(1)} ★ (${snap.tierName})\n` +
+        `⚡ *Perfil:* ${snap.badge}\n` +
         `📱 *WhatsApp:* ${phone}\n\n` +
-        `📋 *CÓDIGO DE IMPORTAÇÃO (ARENA_LEAD):*\n` +
-        `ARENA_LEAD:${leadToken}\n\n` +
-        `👉 *Organizador:* Copie esta mensagem e toque em 'Colar' na aba Ligas do Arena Match para aprovar minha entrada! 🚀`;
+        `📋 *CÓDIGO DE IMPORTAÇÃO (caso não tenha sincronizado na nuvem):*\n` +
+        `ARENA_LEAD:${leadToken}`;
 
       document.getElementById('whatsapp-notify-btn').href = `https://wa.me/?text=${encodeURIComponent(window._currentLeadMessage)}`;
 
@@ -827,14 +1168,14 @@
             pos: posMap[selectedPosition] || 'allRound',
             exp: exp,
             style: style,
-            serve: serve,
-            rec: reception,
-            set: setting,
-            atk: attack,
-            blk: block,
-            def: defense,
-            elo: parseInt(elo, 10),
-            superpower: superpower,
+            serve: skills.serve,
+            rec: skills.reception,
+            set: skills.setting,
+            atk: skills.attack,
+            blk: skills.block,
+            def: skills.defense,
+            elo: snap.elo,
+            superpower: snap.badge,
             status: 'pending',
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
           }).then(function(docRef) {
@@ -869,7 +1210,7 @@
     }
 
     // Inicialização
-    updateEloPreview();
+    applyRecommendedFundamentals(true);
   </script>
 </body>
 </html>
