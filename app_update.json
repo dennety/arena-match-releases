@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.8.0",
-  "latestBuildNumber": 18,
+  "latestVersion": "1.9.0",
+  "latestBuildNumber": 19,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 58.9,
-  "downloadHash": "94b90e1b48e47f283269e936668a56c5be61d978fcb29c35ea54f9cbb6767218",
-  "sha256": "94b90e1b48e47f283269e936668a56c5be61d978fcb29c35ea54f9cbb6767218",
-  "releaseNotes": "• Ficha 3D Interativa no App: arraste a carta para inclinar em 3D (acessível em Ligas e Atletas)\n• Sincronização automática: atletas aprovados na aba Ligas agora vão direto para Atletas & Sorteio\n• Novo botão \"Sortear Times com a Liga\" dentro da própria aba Ligas\n• Correção visual no card final do formulário web (cadeado sem invadir o nome)",
+  "fileSizeMb": 59.3,
+  "downloadHash": "d2368e1873bdce3f51d3501a699800dac43f357b41ad43df6776dd035123bba9",
+  "sha256": "d2368e1873bdce3f51d3501a699800dac43f357b41ad43df6776dd035123bba9",
+  "releaseNotes": "• Nova Aba Exclusiva \"Cartas\": navegue pelas Cartas FIFA 3D, incline com o dedo e compartilhe em PNG\n• Estilo FIFA Ultimate Team (Escudo + 4 raridades: Bronze, Prata, Ouro e Elite)\n• Foto do Atleta por Câmera ou Galeria com salvamento permanente no aparelho",
   "forceUpdate": false,
-  "publishedAt": "2026-11-26T03:52:38Z"
+  "publishedAt": "2026-11-26T13:50:28Z"
 }
