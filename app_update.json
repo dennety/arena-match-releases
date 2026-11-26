@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.5.0",
-  "latestBuildNumber": 15,
+  "latestVersion": "1.6.0",
+  "latestBuildNumber": 16,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 54.2,
-  "downloadHash": "eda5a360de60be0d9c6fc996cb9c1ec9b3c2579fb31126afed02fd69517fd1cf",
-  "sha256": "eda5a360de60be0d9c6fc996cb9c1ec9b3c2579fb31126afed02fd69517fd1cf",
-  "releaseNotes": "• Grid tátil 3D 3x2 no Formato da Partida (corrigido empilhamento vertical)\n• Restauração de Configurações, Factory Reset protegido, Edição e Exclusão de Atletas\n• Botões táteis 3D e novas paletas esportivas (Quadra Olímpica e Sol Forte)\n• Banner 'Voltar ao Placar' ao vivo, piso tipográfico >= 12.5px e layout multi-dispositivo",
+  "fileSizeMb": 55.2,
+  "downloadHash": "acf0d003c75b864b679057f0370852e76326874e6be235206ede985b27e98331",
+  "sha256": "acf0d003c75b864b679057f0370852e76326874e6be235206ede985b27e98331",
+  "releaseNotes": "• Login Progressivo com Conta Google (Firebase Auth + Google Sign-In)\n• Backup e Restauração Automática na Nuvem vinculados à conta Google\n• Proteção de dados isolada por usuário no Cloud Firestore",
   "forceUpdate": false,
-  "publishedAt": "2026-11-25T21:23:26Z"
+  "publishedAt": "2026-11-26T01:25:43Z"
 }
