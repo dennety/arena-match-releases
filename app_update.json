@@ -1,11 +1,11 @@
 {
-  "latestVersion": "1.9.0",
-  "latestBuildNumber": 19,
+  "latestVersion": "2.0.0",
+  "latestBuildNumber": 20,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 59.3,
-  "downloadHash": "d2368e1873bdce3f51d3501a699800dac43f357b41ad43df6776dd035123bba9",
-  "sha256": "d2368e1873bdce3f51d3501a699800dac43f357b41ad43df6776dd035123bba9",
-  "releaseNotes": "• Nova Aba Exclusiva \"Cartas\": navegue pelas Cartas FIFA 3D, incline com o dedo e compartilhe em PNG\n• Estilo FIFA Ultimate Team (Escudo + 4 raridades: Bronze, Prata, Ouro e Elite)\n• Foto do Atleta por Câmera ou Galeria com salvamento permanente no aparelho",
+  "fileSizeMb": 56.0,
+  "downloadHash": "33f5a9f87c3965c068edaee91ccb428d64c540f278e6d9be25d201382cf666ce",
+  "sha256": "33f5a9f87c3965c068edaee91ccb428d64c540f278e6d9be25d201382cf666ce",
+  "releaseNotes": "• Cartas FIFA 3D Redesenhadas: escudo com crista, carbono + neon, fita dourada 3D, pop-out da foto/bola e variação exclusiva LENDA\n• Motor Dual-Track da Noite: Presença (+1 XP sem perda por falta), Time Campeão 2x, Enquete de MVP restrita ao Time Campeão e bônus de Reforço (+1)\n• Ranking Global de Equipes Fixas + Encerramento de Temporada com títulos honoríficos e barra de evolução na Carta",
   "forceUpdate": false,
-  "publishedAt": "2026-11-26T13:50:28Z"
+  "publishedAt": "2026-11-27T05:30:03Z"
 }
