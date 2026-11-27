@@ -1,11 +1,11 @@
 {
-  "latestVersion": "2.0.0",
-  "latestBuildNumber": 20,
+  "latestVersion": "2.1.0",
+  "latestBuildNumber": 21,
   "apkUrl": "https://github.com/dennety/arena-match-releases/releases/latest/download/ArenaMatch-release.apk",
-  "fileSizeMb": 56.0,
-  "downloadHash": "33f5a9f87c3965c068edaee91ccb428d64c540f278e6d9be25d201382cf666ce",
-  "sha256": "33f5a9f87c3965c068edaee91ccb428d64c540f278e6d9be25d201382cf666ce",
-  "releaseNotes": "• Cartas FIFA 3D Redesenhadas: escudo com crista, carbono + neon, fita dourada 3D, pop-out da foto/bola e variação exclusiva LENDA\n• Motor Dual-Track da Noite: Presença (+1 XP sem perda por falta), Time Campeão 2x, Enquete de MVP restrita ao Time Campeão e bônus de Reforço (+1)\n• Ranking Global de Equipes Fixas + Encerramento de Temporada com títulos honoríficos e barra de evolução na Carta",
+  "fileSizeMb": 86.7,
+  "downloadHash": "65db6678702e5831318ab8b21d8ace4de4016282fc7278cbbabb05f9a4a6e489",
+  "sha256": "65db6678702e5831318ab8b21d8ace4de4016282fc7278cbbabb05f9a4a6e489",
+  "releaseNotes": "• Foto do atleta 100% encaixada dentro da moldura da Carta FIFA (sem vazar fora das bordas)\n• Removedor de Fundo Automático Offline (Google ML Kit) ao escolher Câmera, Galeria ou foto atual\n• Prévia comparativa lado a lado para escolher entre \"Usar Sem Fundo\" ou \"Manter Original\"",
   "forceUpdate": false,
-  "publishedAt": "2026-11-27T05:30:03Z"
+  "publishedAt": "2026-11-27T14:50:31Z"
 }
